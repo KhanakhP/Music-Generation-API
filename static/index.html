@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Generator</title>
+</head>
+<body>
+    <h2>🎵 Music Generator</h2>
+
+    <input type="text" id="prompt" placeholder="Enter prompt" />
+    <button onclick="generateMusic()">Generate</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function generateMusic() {
+            const prompt = document.getElementById("prompt").value;
+
+            const response = await fetch("/generate-music", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ prompt })
+            });
+
+            const data = await response.json();
+
+            document.getElementById("result").innerHTML =
+                `<a href="${data.result}" target="_blank">Download Music</a>`;
+        }
+    </script>
+</body>
+</html>
