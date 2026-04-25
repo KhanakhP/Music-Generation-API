@@ -117,11 +117,6 @@ You can open it using:
 4. Notes are converted into MIDI format using `mido`
 5. File is saved and returned via API
 
----
-
-## 🎥 Demo
-
-(Add your screen recording link here)
 
 ---
 
@@ -144,4 +139,4 @@ You can open it using:
 
 ## 👨‍💻 Author
 
-Your Name
+Khanakh Prajapati
